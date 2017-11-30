@@ -19,7 +19,7 @@ volumes:[
 ]){
 
   node ('jenkins-pipeline') {
-
+println "**************************************jenkins-pipeline"
     def pwd = pwd()
     def chart_dir = "${pwd}/charts/croc-hunter"
 
@@ -70,7 +70,7 @@ volumes:[
     }
 
     stage ('test deployment') {
-
+println "*******************************************test deployment"
       container('helm') {
 
         // run helm chart linter
@@ -95,7 +95,7 @@ volumes:[
     }
 
     stage ('publish container') {
-
+println "*************************************publish container"
       container('docker') {
 
         // perform docker login to container registry as the docker-pipeline-plugin doesn't work with the next auth json format
