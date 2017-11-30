@@ -5,13 +5,13 @@
 Master:
   ImageTag: "2.74"
   Memory: "512Mi"
-  HostName: jenkins.acs.az.estrado.io
+  HostName: af017f9a6d54a11e7ac550e9a585d6d8-97675390.us-east-1.elb.amazonaws.com
   ServiceType: ClusterIP
   InstallPlugins:
       - kubernetes:0.12
       - workflow-aggregator:2.5
       - credentials-binding:1.13
-      - git:3.5.1
+      - git:3.6.0
       - pipeline-github-lib:1.0
       - ghprb:1.39.0
       - blueocean:1.1.7
@@ -31,9 +31,9 @@ Master:
       kubernetes.io/tls-acme: "true"
 
     TLS:
-      - secretName: jenkins.acs.az.estrado.io
+      - secretName: af017f9a6d54a11e7ac550e9a585d6d8-97675390.us-east-1.elb.amazonaws.com
         hosts:
-          - jenkins.acs.az.estrado.io
+          - af017f9a6d54a11e7ac550e9a585d6d8-97675390.us-east-1.elb.amazonaws.com
 
 Agent:
   Enabled: false
