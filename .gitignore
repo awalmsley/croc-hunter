@@ -3,4 +3,4 @@ vendor/
 *.tgz
 levo-charts
 croc-hunter
-.idea
+.idea/
